@@ -23,5 +23,10 @@ def createapp(config_class=Config):
     '''
     from app.auth import auth as auth_bp
     app.register_blueprint(auth_bp)
+    '''
+    Registering errores blueprint
+    '''
+    from app.errors import errors as errors_bp
+    app.register_blueprint(errors_bp)
 
     return app
