@@ -9,4 +9,74 @@
   width: auto;
 }
 
+.about-card{
+    height: 20rem;
+}
 
+.logo-image{
+    width: 18rem;
+    height: 12rem;
+}
+
+/* about card transition */
+/* .about-card{
+    position: relative;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+}
+
+.about-card,
+.card-body{
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+}
+
+.about-card,
+.card-body:hover{
+    height : 320px; 
+}
+
+.about-card,
+.card-body,
+.logo{
+    position: relative;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+}
+
+.about-card,
+.card-body,
+.logo
+.log-image{
+    height: 8rem;
+    width: 13rem;
+    border-radius : 15px;
+}
+
+
+.about-card,
+.card-body,
+.content{
+    position: relative;
+    color: #111;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition : 0.3s ease-in-out;
+}
+
+.about-card,
+.card-body:hover,
+.content{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+ */
