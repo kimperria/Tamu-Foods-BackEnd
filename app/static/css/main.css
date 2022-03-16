@@ -1,0 +1,11 @@
+/* .picha{
+    height: 50%;
+} */
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 350vh;
+  width: auto;
+}
+
