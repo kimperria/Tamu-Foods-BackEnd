@@ -28,12 +28,15 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_anonymous %}
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('auth.login') }}">Login</a>
         </li>
+        {% else %}
         <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="{{ url_for('auth.logout')}}">Logout</a>
         </li>
+        {% endif %}
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('auth.signup') }}">SignUp</a>
         </li>

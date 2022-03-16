@@ -1,8 +1,9 @@
+import email
 from app.auth import auth
 from flask import flash, render_template,redirect, url_for
 from app.auth.forms import LoginForm, SignUpForm
 from app.model import User
-from flask_login import current_user, login_user
+from flask_login import current_user, login_user,logout_user
 from app import db
 
 
@@ -25,14 +26,14 @@ def login():
         '''
         Logic that creates a user after clicking submit
         '''
-        user = User.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(email=form.email.data).first()
         if user is None or not user.check_password(form.password.data):
             '''
             condition that handles user input
             '''
             flash('Invalid username or password')
             return render_template(url_for('auth.login'))
-        login_user(user, remember= form.remember_me.data)
+        login_user(user)
         flash('LogIn sucess')
         return redirect(url_for('main.index'))
     return render_template('auth/login.html', title=title, form=form)
@@ -69,5 +70,5 @@ def logout():
     '''
     Function that handles log out
     '''
-    login_user()
+    logout_user()
     return redirect(url_for('main.index'))
