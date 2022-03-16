@@ -1,5 +1,4 @@
 from flask import Flask
-import sqlalchemy
 from config import Config
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
@@ -43,3 +42,10 @@ def createapp(config_class=Config):
     app.register_blueprint(main_bp)
 
     return app
+
+
+
+from app import model
+'''
+Help db initialization
+'''
