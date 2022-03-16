@@ -36,5 +36,10 @@ def createapp(config_class=Config):
     '''
     from app.errors import errors as errors_bp
     app.register_blueprint(errors_bp)
+    '''
+    Registering main blueprint
+    '''
+    from app.main import main as main_bp
+    app.register_blueprint(main_bp)
 
     return app
