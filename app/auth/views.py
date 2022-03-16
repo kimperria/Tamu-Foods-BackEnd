@@ -32,7 +32,7 @@ def login():
             condition that handles user input
             '''
             flash('Invalid username or password')
-            return render_template(url_for('auth.login'))
+            return redirect(url_for('auth.login'))
         login_user(user)
         flash('LogIn sucess')
         return redirect(url_for('main.index'))
