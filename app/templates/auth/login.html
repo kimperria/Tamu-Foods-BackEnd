@@ -12,7 +12,7 @@
             <p>
                 {{ wtf.quick_form(form) }}
             </p>
-            <p>New here? Create your account <a href="#">Signup</a></p>
+            <p>New here? Create your account <a href="{{ url_for('auth.signup') }}">Signup</a></p>
             <div class="col-md-3">
                 <!-- empty -->
             </div>
