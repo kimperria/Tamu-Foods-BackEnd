@@ -1,3 +1,4 @@
+import logging
 from flask import Flask
 from config import Config
 from flask_bootstrap import Bootstrap
@@ -44,6 +45,12 @@ def createapp(config_class=Config):
     '''
     from app.main import main as main_bp
     app.register_blueprint(main_bp)
+
+
+    if app.config['LOG_TO_STDOUT']:
+        stream_handler = logging.StreamHandler()
+        stream_handler.setLevel(logging.INFO)
+        app.logger.addHandler(stream_handler)
 
     return app
 
