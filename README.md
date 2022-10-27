@@ -60,8 +60,4 @@ mkvirtualenv virtual
 
 ## Author
 
-* Design and developed by: [John Kimani](https://github.com/John-Kimani)
-
-Collaborators:
-1. Back-end developer Truphosa Ambiyo
-2. Front-end developer Zakiya Adam
+* Developed by: [John Kimani](https://github.com/John-Kimani)
